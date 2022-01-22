@@ -8,9 +8,12 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@types/node": "^17.0.10",
+    "@types/react": "^17.0.38",
     "next": "12.0.8",
     "react": "17.0.2",
-    "react-dom": "17.0.2"
+    "react-dom": "17.0.2",
+    "typescript": "^4.5.5"
   },
   "devDependencies": {
     "eslint": "8.7.0",
