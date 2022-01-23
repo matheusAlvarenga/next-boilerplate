@@ -6,7 +6,13 @@ import { useTranslation } from "next-i18next";
 
 import Github from "../assets/svgs/github.svg";
 import { Button } from "../components/button";
-import { HomepageWrapper, MainTitle, SubTitle, VerticalFlex } from "../styles";
+import {
+  AbsoluteDiv,
+  HomepageWrapper,
+  MainTitle,
+  SubTitle,
+  VerticalFlex,
+} from "../styles";
 import { AbsoluteLottie } from "../components/absoluteLottie";
 import spaceLottie from "../assets/lotties/space.json";
 import { Spacer32 } from "../styles/layout/spacers.styles";
@@ -49,6 +55,11 @@ const Home: React.FC<HomeProps> = () => {
             bottom
           />
         </VerticalFlex>
+        <AbsoluteDiv bottom="40px" left="40px">
+          <Button styling="clear" onClick={() => {}}>
+            EN-US
+          </Button>
+        </AbsoluteDiv>
       </HomepageWrapper>
     </div>
   );

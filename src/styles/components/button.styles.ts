@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const ButtonWrapper = styled.button`
+export const ButtonWrapper = styled.button<{ styling: "main" | "clear" }>`
   display: flex;
   justify-content: center;
   align-items: center;
@@ -9,9 +9,11 @@ export const ButtonWrapper = styled.button`
   padding: 8px 24px;
 
   border-radius: 8px;
-  border: 0;
+  border: ${props =>
+    props.styling === "main" ? "0" : `2px solid ${props.theme.colors.primary}`};
 
-  background-color: ${props => props.theme.colors.primary};
+  background-color: ${props =>
+    props.styling === "main" ? props.theme.colors.primary : "unset"};
 `;
 
 export const ButtonIcon = styled.div`
