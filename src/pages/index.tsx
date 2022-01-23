@@ -6,7 +6,7 @@ import { useTranslation } from "next-i18next";
 
 import Github from "../assets/svgs/github.svg";
 import { Button } from "../components/button";
-import { HomepageWrapper } from "../styles";
+import { HomepageWrapper, MainTitle, SubTitle } from "../styles";
 import { AbsoluteLottie } from "../components/absoluteLottie";
 import spaceLottie from "../assets/lotties/space.json";
 
@@ -27,6 +27,8 @@ const Home: React.FC<HomeProps> = () => {
 
       <HomepageWrapper>
         <AbsoluteLottie lottieData={spaceLottie} />
+        <MainTitle>{t("main-title")}</MainTitle>
+        <SubTitle>{t("sub-title")}</SubTitle>
         <Button onClick={() => {}} Icon={Github}>
           {t("main-button")}
         </Button>
