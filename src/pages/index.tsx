@@ -5,14 +5,19 @@ import { GetStaticProps } from "next";
 import { useTranslation } from "next-i18next";
 
 import Activity from "../assets/activity.svg";
+import { exampleGreeting } from "../services/api/example_greeting";
 
-export type HomeProps = { locale: string };
+export type HomeProps = { locale: string; greeting: string };
 
-export const getStaticProps: GetStaticProps = async ({ locale }) => ({
-  props: { ...(await serverSideTranslations(locale)) },
-});
+export const getStaticProps: GetStaticProps = async ({ locale }) => {
+  const { greeting } = await exampleGreeting({ name: "Matheus" });
 
-const Home: React.FC = () => {
+  return {
+    props: { ...(await serverSideTranslations(locale)), greeting },
+  };
+};
+
+const Home: React.FC<HomeProps> = ({ greeting }) => {
   const { t } = useTranslation();
 
   return (
@@ -24,6 +29,7 @@ const Home: React.FC = () => {
       <main>
         Welcome to Next.js Boilerplate
         <h1>{t("home.text1")}</h1>
+        <h1>{greeting}</h1>
         <Activity alt="test" />
       </main>
     </div>
