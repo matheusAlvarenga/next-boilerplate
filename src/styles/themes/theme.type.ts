@@ -1,5 +1,7 @@
 export interface Theme {
   colors: {
-    background: string;
+    black: string;
+    primary: string;
+    white: string;
   };
 }

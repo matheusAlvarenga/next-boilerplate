@@ -42,6 +42,16 @@ export default class MyDocument extends Document {
       <Html lang="pt-br">
         <Head>
           <meta charSet="utf-8" />
+          <link rel="preconnect" href="https://fonts.googleapis.com" />
+          <link
+            rel="preconnect"
+            href="https://fonts.gstatic.com"
+            crossOrigin=""
+          />
+          <link
+            href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,600;0,900;1,200;1,500&display=swap"
+            rel="stylesheet"
+          />
         </Head>
         <body>
           <Main />

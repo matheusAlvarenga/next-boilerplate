@@ -3,33 +3,18 @@ import Head from "next/head";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import { GetStaticProps } from "next";
 import { useTranslation } from "next-i18next";
-import Lottie from "react-lottie";
-import animationData from "../assets/lotties/space.json";
 
 import Activity from "../assets/activity.svg";
-import { exampleGreeting } from "../services/api/example_greeting";
+import { Button } from "../components/button";
 
 export type HomeProps = { locale: string; greeting: string };
 
-export const getStaticProps: GetStaticProps = async ({ locale }) => {
-  const { greeting } = await exampleGreeting({ name: "Matheus" });
+export const getStaticProps: GetStaticProps = async ({ locale }) => ({
+  props: { ...(await serverSideTranslations(locale)) },
+});
 
-  return {
-    props: { ...(await serverSideTranslations(locale)), greeting },
-  };
-};
-
-const Home: React.FC<HomeProps> = ({ greeting }) => {
+const Home: React.FC<HomeProps> = () => {
   const { t } = useTranslation();
-
-  const defaultOptions = {
-    loop: true,
-    autoplay: true,
-    animationData,
-    rendererSettings: {
-      preserveAspectRatio: "xMidYMid slice",
-    },
-  };
 
   return (
     <div>
@@ -38,11 +23,9 @@ const Home: React.FC<HomeProps> = ({ greeting }) => {
       </Head>
 
       <main>
-        Welcome to Next.js Boilerplate
-        <h1>{t("home.text1")}</h1>
-        <h1>{greeting}</h1>
-        <Activity alt="test" />
-        <Lottie options={defaultOptions} height={400} width={400} />
+        <Button onClick={() => {}} Icon={Activity}>
+          {t("main-button")}
+        </Button>
       </main>
     </div>
   );
