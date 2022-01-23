@@ -6,4 +6,8 @@ export const ResetStyle = createGlobalStyle`
     padding: 0;
     box-sizing: border-box;
   }
+
+  button, link, input[type="submit"] {
+    cursor: pointer;
+  }
 `;
