@@ -3,6 +3,8 @@ import Head from "next/head";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import { GetStaticProps } from "next";
 import { useTranslation } from "next-i18next";
+import Lottie from "react-lottie";
+import animationData from "../assets/lotties/space.json";
 
 import Activity from "../assets/activity.svg";
 import { exampleGreeting } from "../services/api/example_greeting";
@@ -20,6 +22,15 @@ export const getStaticProps: GetStaticProps = async ({ locale }) => {
 const Home: React.FC<HomeProps> = ({ greeting }) => {
   const { t } = useTranslation();
 
+  const defaultOptions = {
+    loop: true,
+    autoplay: true,
+    animationData,
+    rendererSettings: {
+      preserveAspectRatio: "xMidYMid slice",
+    },
+  };
+
   return (
     <div>
       <Head>
@@ -31,6 +42,7 @@ const Home: React.FC<HomeProps> = ({ greeting }) => {
         <h1>{t("home.text1")}</h1>
         <h1>{greeting}</h1>
         <Activity alt="test" />
+        <Lottie options={defaultOptions} height={400} width={400} />
       </main>
     </div>
   );
