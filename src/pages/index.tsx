@@ -9,6 +9,7 @@ import { Button } from "../components/button";
 import { HomepageWrapper, MainTitle, SubTitle, VerticalFlex } from "../styles";
 import { AbsoluteLottie } from "../components/absoluteLottie";
 import spaceLottie from "../assets/lotties/space.json";
+import { Spacer32 } from "../styles/layout/spacers.styles";
 
 export type HomeProps = { locale: string; greeting: string };
 
@@ -30,6 +31,7 @@ const Home: React.FC<HomeProps> = () => {
         <VerticalFlex>
           <MainTitle>{t("main-title")}</MainTitle>
           <SubTitle>{t("sub-title")}</SubTitle>
+          <Spacer32 />
           <Button onClick={() => {}} Icon={Github}>
             {t("main-button")}
           </Button>
