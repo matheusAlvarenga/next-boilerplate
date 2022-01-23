@@ -1,5 +1,7 @@
 {
   "main-button": "give a star",
   "main-title": "NEXT.js",
-  "sub-title": "BOILERPLATE"
+  "sub-title": "BOILERPLATE",
+  "builtin-features": "Built-in Features",
+  "next-features": "Next Features"
 }

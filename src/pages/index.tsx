@@ -3,7 +3,7 @@ import Head from "next/head";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import { GetStaticProps } from "next";
 import { useTranslation } from "next-i18next";
-
+import { useRouter } from "next/router";
 import Github from "../assets/svgs/github.svg";
 import { Button } from "../components/button";
 import {
@@ -19,14 +19,15 @@ import { Spacer32 } from "../styles/layout/spacers.styles";
 import { Features } from "../components/features";
 import { builtInFeatures, nextFeatures } from "../constants";
 
-export type HomeProps = { locale: string; greeting: string };
+export type HomeProps = { locale: string };
 
 export const getStaticProps: GetStaticProps = async ({ locale }) => ({
-  props: { ...(await serverSideTranslations(locale)) },
+  props: { ...(await serverSideTranslations(locale)), locale },
 });
 
-const Home: React.FC<HomeProps> = () => {
+const Home: React.FC<HomeProps> = ({ locale }) => {
   const { t } = useTranslation();
+  const router = useRouter();
 
   return (
     <div>
@@ -37,27 +38,39 @@ const Home: React.FC<HomeProps> = () => {
       <HomepageWrapper>
         <AbsoluteLottie lottieData={spaceLottie} />
         <VerticalFlex>
-          <Features title="Built-in Features" features={builtInFeatures} />
+          <Features title={t("builtin-features")} features={builtInFeatures} />
         </VerticalFlex>
         <VerticalFlex>
           <MainTitle>{t("main-title")}</MainTitle>
           <SubTitle>{t("sub-title")}</SubTitle>
           <Spacer32 />
-          <Button onClick={() => {}} Icon={Github}>
+          <Button
+            onClick={() =>
+              router.push(
+                "https://github.com/matheusAlvarenga/next-boilerplate"
+              )
+            }
+            Icon={Github}
+          >
             {t("main-button")}
           </Button>
         </VerticalFlex>
         <VerticalFlex>
           <Features
-            title="Built-in Features"
+            title={t("next-features")}
             features={nextFeatures}
             side="right"
             bottom
           />
         </VerticalFlex>
         <AbsoluteDiv bottom="40px" left="40px">
-          <Button styling="clear" onClick={() => {}}>
-            EN-US
+          <Button
+            styling="clear"
+            onClick={() =>
+              router.push("/", "/", { locale: locale === "en" ? "pt" : "en" })
+            }
+          >
+            {locale === "en" ? "PT-BR" : "EN-US"}
           </Button>
         </AbsoluteDiv>
       </HomepageWrapper>
