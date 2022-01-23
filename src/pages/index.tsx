@@ -4,8 +4,9 @@ import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import { GetStaticProps } from "next";
 import { useTranslation } from "next-i18next";
 
-import Activity from "../assets/activity.svg";
+import Github from "../assets/svgs/github.svg";
 import { Button } from "../components/button";
+import { HomepageWrapper } from "../styles";
 
 export type HomeProps = { locale: string; greeting: string };
 
@@ -22,11 +23,11 @@ const Home: React.FC<HomeProps> = () => {
         <title>Create Next App</title>
       </Head>
 
-      <main>
-        <Button onClick={() => {}} Icon={Activity}>
+      <HomepageWrapper>
+        <Button onClick={() => {}} Icon={Github}>
           {t("main-button")}
         </Button>
-      </main>
+      </HomepageWrapper>
     </div>
   );
 };
