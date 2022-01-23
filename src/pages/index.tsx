@@ -10,6 +10,8 @@ import { HomepageWrapper, MainTitle, SubTitle, VerticalFlex } from "../styles";
 import { AbsoluteLottie } from "../components/absoluteLottie";
 import spaceLottie from "../assets/lotties/space.json";
 import { Spacer32 } from "../styles/layout/spacers.styles";
+import { Features } from "../components/features";
+import { builtInFeatures, nextFeatures } from "../constants";
 
 export type HomeProps = { locale: string; greeting: string };
 
@@ -29,12 +31,23 @@ const Home: React.FC<HomeProps> = () => {
       <HomepageWrapper>
         <AbsoluteLottie lottieData={spaceLottie} />
         <VerticalFlex>
+          <Features title="Built-in Features" features={builtInFeatures} />
+        </VerticalFlex>
+        <VerticalFlex>
           <MainTitle>{t("main-title")}</MainTitle>
           <SubTitle>{t("sub-title")}</SubTitle>
           <Spacer32 />
           <Button onClick={() => {}} Icon={Github}>
             {t("main-button")}
           </Button>
+        </VerticalFlex>
+        <VerticalFlex>
+          <Features
+            title="Built-in Features"
+            features={nextFeatures}
+            side="right"
+            bottom
+          />
         </VerticalFlex>
       </HomepageWrapper>
     </div>

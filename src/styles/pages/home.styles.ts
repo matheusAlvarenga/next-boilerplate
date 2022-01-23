@@ -8,5 +8,7 @@ export const HomepageWrapper = styled.main`
   justify-content: space-between;
   align-items: stretch;
 
+  padding: 40px;
+
   background-color: ${props => props.theme.colors.black};
 `;
