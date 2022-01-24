@@ -87,7 +87,12 @@
   - [ ] Search and add a typing for the locales
   - [ ] Integrate storybook
   - [ ] Add Cypress (e2e) testing
+    - [X] Integrate Cypress
+    - [ ] Create example test
   - [ ] Add Jest + React Testing Library (Unit and Integration) testing
+    - [X] Integrate Jest
+    - [X] Integrate React Testing Library
+    - [ ] Create example test
   - [ ] Add Absolute paths
   - [ ] Add example CI/CD for github actions
   - [ ] Add a folder structure documentation
