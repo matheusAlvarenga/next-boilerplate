@@ -71,6 +71,13 @@
   * **I18n:** An internationalization-framework which provides a function that takes a key, some options, and returns the value for the current language. Helps you to add language translation support to your app.
   * **Service Mocking:** An alternative to mock all services for an easy front end development.
   * **Lottie:** Lightweight, scalable animations inside JS.
+  * **Cypress:** Fast, easy and reliable testing for anything that runs in a browser.
+  * **Jest:** Jest is a delightful JavaScript Testing Framework with a focus on simplicity.
+  * **React Testing Library:** Simple and complete testing utilities created for testing React.
+  * **Husky:** Modern native Git hooks made easy
+  * **Commitlint:** Checks if your commit messages meet the conventional commit format.
+  * **Conventional Commits:** A specification for adding human and machine readable meaning to commit messages.
+  * **Commitizen:** Command-line utility to create commits with your rules. 
 
 <br>
 
@@ -86,9 +93,6 @@
 
   - [ ] Search and add a typing for the locales
   - [ ] Integrate storybook
-  - [X] Add Cypress (e2e) testing
-    - [X] Integrate Cypress
-    - [X] Create example test
   - [ ] Add Jest + React Testing Library (Unit and Integration) testing
     - [X] Integrate Jest
     - [X] Integrate React Testing Library
