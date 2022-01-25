@@ -41,10 +41,11 @@ const Home: React.FC<HomeProps> = ({ locale }) => {
           <Features title={t("builtin-features")} features={builtInFeatures} />
         </VerticalFlex>
         <VerticalFlex>
-          <MainTitle>{t("main-title")}</MainTitle>
-          <SubTitle>{t("sub-title")}</SubTitle>
+          <MainTitle data-testid="main-title">{t("main-title")}</MainTitle>
+          <SubTitle data-testid="sub-title">{t("sub-title")}</SubTitle>
           <Spacer32 />
           <Button
+            data_testid="main-button"
             onClick={() =>
               router.push(
                 "https://github.com/matheusAlvarenga/next-boilerplate"
@@ -65,6 +66,7 @@ const Home: React.FC<HomeProps> = ({ locale }) => {
         </VerticalFlex>
         <AbsoluteDiv bottom="40px" left="40px">
           <Button
+            data_testid="lang-changer"
             styling="clear"
             onClick={() =>
               router.push("/", "/", { locale: locale === "en" ? "pt" : "en" })

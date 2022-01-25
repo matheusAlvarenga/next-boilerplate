@@ -5,6 +5,7 @@ export type ButtonProps = {
   onClick: () => void;
   Icon?: any;
   styling?: "main" | "clear";
+  data_testid?: string;
 };
 
 export const Button: React.FC<ButtonProps> = ({
@@ -12,8 +13,9 @@ export const Button: React.FC<ButtonProps> = ({
   onClick,
   children,
   styling = "main",
+  data_testid,
 }) => (
-  <ButtonWrapper styling={styling} onClick={onClick}>
+  <ButtonWrapper data-testid={data_testid} styling={styling} onClick={onClick}>
     {Icon && (
       <ButtonIcon>
         <Icon />

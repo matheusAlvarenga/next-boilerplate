@@ -86,9 +86,9 @@
 
   - [ ] Search and add a typing for the locales
   - [ ] Integrate storybook
-  - [ ] Add Cypress (e2e) testing
+  - [X] Add Cypress (e2e) testing
     - [X] Integrate Cypress
-    - [ ] Create example test
+    - [X] Create example test
   - [ ] Add Jest + React Testing Library (Unit and Integration) testing
     - [X] Integrate Jest
     - [X] Integrate React Testing Library
