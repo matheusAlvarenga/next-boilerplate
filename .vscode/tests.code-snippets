@@ -1,0 +1,82 @@
+{
+	"describe_block": {
+    "prefix": "desc",
+    "body": [
+      "describe(\"${1:Block Name}\", () => {",
+      "",
+      "});"
+    ],
+    "description": "Snippet used for creating a test Describe block"
+  },
+  "context_block": {
+    "prefix": "cont",
+    "body": [
+      "context(\"${1:Context Name}\", () => {",
+      "",
+      "});"
+    ],
+    "description": "Snippet used for creating a test Context block"
+  },
+  "it_block": {
+    "prefix": "it",
+    "body": [
+      "it(\"should ${1:Assumption}\", () => {",
+      "",
+      "});"
+    ],
+    "description": "Snippet used for creating a test It block"
+  },
+  "test_block": {
+    "prefix": "test",
+    "body": [
+      "test(\"${1:Test Name}\", () => {",
+      "",
+      "});"
+    ],
+    "description": "Snippet used for creating a test Test block"
+  },
+  "before_each_block": {
+    "prefix": "beach",
+    "body": [
+      "beforeEach(() => ${1:});"
+    ],
+    "description": "Snippet used for creating a test Before Each"
+  },
+  "before_all_block": {
+    "prefix": "ball",
+    "body": [
+      "beforeAll(() => ${1:});"
+    ],
+    "description": "Snippet used for creating a test Before All"
+  },
+  "after_each_block": {
+    "prefix": "aeach",
+    "body": [
+      "afterEach(() => ${1:});"
+    ],
+    "description": "Snippet used for creating a test After Each"
+  },
+  "after_all_block": {
+    "prefix": "aall",
+    "body": [
+      "afterAll(() => ${1:});"
+    ],
+    "description": "Snippet used for creating a test After All"
+  },
+  "full_test_block": {
+    "prefix": "fulltest",
+    "body": [
+      "describe('${1:Block Name}', () => {",
+      "  context('${2:Context Name}', () => {",
+      "    beforeEach(() => ${3:});",
+      "    beforeAll(() => ${4:});",
+      "",
+      "    it('should ${5:Assumption}', () => {",
+      "      ${6:Test code}",
+      "    });",
+      "  });",
+      "});"
+    ],
+    "description": "Snippet used for creating a full test block with describe, context, beforeEach and All"
+  }
+}
