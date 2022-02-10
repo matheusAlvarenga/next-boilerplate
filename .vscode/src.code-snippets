@@ -1,0 +1,46 @@
+{
+	"react_component_with_type": {
+		"prefix": "rct",
+		"body": [
+			"import React from \"react\";",
+			"",
+			"export type ${1:Nome do Componente}Props = {};",
+			"",
+			"export const ${1:Nome do Componente}: React.FC<${1:Nome do Componente}Props> = () => {",
+			"  return (",
+			"    <div>",
+			"      <h1>${1:Nome do Componente}</h1>",
+			"    </div>",
+			"  )",
+			"}",
+			""
+		],
+		"description": "Snippet used for creating a basic React Component with typescript props typing"
+	},
+	"react_component": {
+		"prefix": "rc",
+		"body": [
+			"import React from \"react\";",
+			"",
+			"export const ${1:Nome do Componente}: React.FC = () => {",
+			"  return (",
+			"    <div>",
+			"      <h1>${1:Nome do Componente}</h1>",
+			"    </div>",
+			"  )",
+			"}",
+			""
+		],
+		"description": "Snippet used for creating a basic React Component"
+	},
+  "styled_file": {
+		"prefix": "st",
+		"body": [
+			"import styled from \"styled-components\";",
+			"",
+			"export const ${1:Wrapper} = styled.div``;",
+			""
+		],
+		"description": "Snippet used for creating a base Styled Components file"
+	}
+}
