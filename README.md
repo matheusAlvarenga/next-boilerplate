@@ -101,7 +101,7 @@
   - [ ] Add example CI/CD for github actions
   - [ ] Add a folder structure documentation
   - [ ] Add a CLI for creating project
-  - [ ] Add scoped vscode snippets
+  - [X] Add scoped vscode snippets
 
 </div>
 
