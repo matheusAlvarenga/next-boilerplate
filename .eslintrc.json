@@ -10,7 +10,8 @@
         "airbnb",
         "airbnb-typescript",
         "plugin:@typescript-eslint/recommended",
-        "prettier"
+        "prettier",
+        "plugin:storybook/recommended"
     ],
     "parser": "@typescript-eslint/parser",
     "parserOptions": {
@@ -35,5 +36,14 @@
         "react/jsx-filename-extension": [2, { "extensions": [".js", ".jsx", ".ts", ".tsx"] }],
         "react/jsx-props-no-spreading": "off",
         "@typescript-eslint/no-explicit-any": "off"
-    }
+    },
+    "overrides": [
+      {
+        "files": ["*.stories.@(ts|tsx|js|jsx|mjs|cjs)"],
+        "rules": {
+          "storybook/hierarchy-separator": "error",
+          "storybook/default-exports": "off"
+        }
+      }
+    ]
 }
