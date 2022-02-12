@@ -98,7 +98,7 @@
     - [X] Integrate Jest
     - [X] Integrate React Testing Library
     - [ ] Create example test
-  - [ ] Add Absolute paths
+  - [X] Add Absolute paths
   - [ ] Add example CI/CD for github actions
   - [ ] Add a folder structure documentation
   - [ ] Add a CLI for creating project
