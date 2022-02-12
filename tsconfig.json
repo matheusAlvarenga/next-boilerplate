@@ -18,7 +18,24 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "jsx": "preserve",
-    "types": ["cypress"]
+    "types": ["cypress"],
+    "baseUrl": "./src",
+    "paths": {
+      "@assets/*": ["assets/*"],
+      "@components/*": ["components/*"],
+      "@constants/*": ["constants/*"],
+      "@containers/*": ["containers/*"],
+      "@contexts/*": ["contexts/*"],
+      "@hooks/*": ["hooks/*"],
+      "@pages/*": ["pages/*"],
+      "@scripts/*": ["scripts/*"],
+      "@services/*": ["services/*"],
+      "@stores/*": ["stores/*"],
+      "@styles/*": ["styles/*"],
+      "@utils/*": ["utils/*"],
+      "@cypress/*": ["./cypress/*"],
+      "@tests/*": ["./testes/*"],
+    }
   },
   "include": [
     "next-env.d.ts",
