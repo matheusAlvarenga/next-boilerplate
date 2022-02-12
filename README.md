@@ -1,9 +1,9 @@
-<img src="docs/images/cover.jpg">
+<img src="images/cover.jpg">
 <br>
 <br>
 <div align="center">
   <a href="https://github.com/matheusAlvarenga/next-boilerplate">
-    <img src="docs/images/logo.png" alt="Logo" width="320">
+    <img src="images/logo.png" alt="Logo" width="320">
   </a>
 
   <p align="center">
@@ -17,7 +17,7 @@
     ·
     <a href="https://github.com/matheusAlvarenga">My Github Profile</a>
     ·
-    <a href="https://github.com/matheusAlvarenga/next-boilerplate/blob/master/docs/folders-and-files.md">Structure Documentation</a>
+    <a href="#">Documentation</a>
 </div>
 
 <br>
