@@ -93,16 +93,23 @@
 <div>
 
   - [ ] Search and add a typing for the locales
-  - [X] Integrate storybook
   - [ ] Add Jest + React Testing Library (Unit and Integration) testing
     - [X] Integrate Jest
     - [X] Integrate React Testing Library
     - [ ] Create example test
-  - [ ] Add Absolute paths
   - [ ] Add example CI/CD for github actions
-  - [ ] Add a folder structure documentation
+  - [ ] Add a docussaurus documentation
+    - [ ] Add a folder structure documentation
+    - [ ] Add a documentation about each feature
+    - [ ] Add integration tutorials
   - [ ] Add a CLI for creating project
-  - [X] Add scoped vscode snippets
+  - [ ] Logging systems
+    - [ ] Add external system logging
+    - [ ] Remove console logs from compiled next
+  - [ ] Improve /api routes
+  - [ ] Add lint staged for pre commit
+  - [ ] Add test scripts for pre push
+  - [ ] AMP integration?
 
 </div>
 
