@@ -92,7 +92,7 @@
 <div>
 
   - [ ] Search and add a typing for the locales
-  - [ ] Integrate storybook
+  - [X] Integrate storybook
   - [ ] Add Jest + React Testing Library (Unit and Integration) testing
     - [X] Integrate Jest
     - [X] Integrate React Testing Library
