@@ -45,6 +45,12 @@
           "storybook/default-exports": "off",
           "import/no-extraneous-dependencies": "off"
         }
+      },
+      {
+        "files": ["**/services/**"],
+        "rules": {
+          "import/no-cycle": "off"
+        }
       }
     ]
 }

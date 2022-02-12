@@ -1,4 +1,3 @@
-/* eslint-disable import/no-cycle */
 import * as integration from "./integration";
 import * as mock from "./mock";
 
