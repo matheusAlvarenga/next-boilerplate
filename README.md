@@ -107,8 +107,6 @@
     - [ ] Add external system logging
     - [ ] Remove console logs from compiled next
   - [ ] Improve /api routes
-  - [ ] Add lint staged for pre commit
-  - [ ] Add test scripts for pre push
   - [ ] AMP integration?
 
 </div>
