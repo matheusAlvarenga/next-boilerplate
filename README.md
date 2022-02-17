@@ -108,6 +108,7 @@
     - [ ] Remove console logs from compiled next
   - [ ] Improve /api routes
   - [ ] AMP integration?
+  - [ ] Add React Query or SWR?
 
 </div>
 
