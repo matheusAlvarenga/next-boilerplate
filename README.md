@@ -109,6 +109,7 @@
   - [ ] Improve /api routes
   - [ ] AMP integration?
   - [ ] Add React Query or SWR?
+  - [ ] Add responsivity example with styled components breakpoints
 
 </div>
 
