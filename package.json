@@ -17,6 +17,7 @@
     "@next/bundle-analyzer": "^12.0.8",
     "@types/react-lottie": "^1.2.6",
     "axios": "^0.25.0",
+    "chalk": "^5.0.0",
     "i18next": "^21.6.7",
     "i18next-browser-languagedetector": "^6.1.2",
     "next": "12.0.8",
