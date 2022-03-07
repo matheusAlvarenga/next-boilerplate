@@ -1,3 +1,5 @@
+import { consoleLog } from "./console.logger";
+
 export type Log = {
   slug: string;
   route: string;
@@ -7,4 +9,6 @@ export type Log = {
 
 export type LogSystem = (data: Log) => void;
 
-export const newLog: LogSystem = data => {};
+export const newLog: LogSystem = data => {
+  consoleLog(data);
+};
